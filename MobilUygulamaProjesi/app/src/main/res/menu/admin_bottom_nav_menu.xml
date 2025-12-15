@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/admin_kitaplar_fragment_nav"
+        android:title="Kitaplar"
+        android:icon="@android:drawable/ic_menu_agenda"/>
+
+    <item
+        android:id="@+id/admin_kullanicilar_fragment_nav"
+        android:title="Kullanıcılar"
+        android:icon="@android:drawable/ic_menu_myplaces"/>
+
+    <item
+        android:id="@+id/admin_siparisler_fragment_nav"
+        android:title="Siparişler"
+        android:icon="@android:drawable/ic_menu_recent_history"/>
+
+    <item
+        android:id="@+id/adminProfilFragment"
+        android:title="Profil"
+        android:icon="@android:drawable/ic_menu_manage"/>
+
+</menu>

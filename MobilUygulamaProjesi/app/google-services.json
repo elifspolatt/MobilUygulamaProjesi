@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "434285930774",
+    "firebase_url": "https://mobiluygulamaprojesi-531ca-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mobiluygulamaprojesi-531ca",
+    "storage_bucket": "mobiluygulamaprojesi-531ca.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434285930774:android:4162f1ceb3a2c1c47ac837",
+        "android_client_info": {
+          "package_name": "com.example.mobiluygulamaprojesi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1KbK2H1U_AFHFfcbK9NgSHALQJrFcFuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

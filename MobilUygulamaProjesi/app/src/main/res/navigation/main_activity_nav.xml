@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/giris_nav">
+    <fragment
+        android:id="@+id/giris_nav"
+        android:name="com.example.mobiluygulamaprojesi.GirisFragment"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_giris_to_kayit"
+            app:destination="@id/kayit_nav" />
+        <action
+            android:id="@+id/action_giris_to_sifreSifirlama"
+            app:destination="@id/sifreSifirlama_nav" />
+        <action
+            android:id="@+id/action_giris_to_anasayfa"
+            app:destination="@id/anasayfa_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayit_nav"
+        android:name="com.example.mobiluygulamaprojesi.KayitFragment"
+        tools:layout="@layout/fragment_kayit" >
+        <action
+            android:id="@+id/action_kayit_to_giris"
+            app:destination="@id/giris_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/sifreSifirlama_nav"
+        android:name="com.example.mobiluygulamaprojesi.SifreSifirlamaFragment"
+        tools:layout="@layout/fragment_sifre_sifirlama" >
+        <action
+            android:id="@+id/action_sifreSifirlama_to_sifreGirme"
+            app:destination="@id/sifreGirme_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/anasayfa_nav"
+        android:name="com.example.mobiluygulamaprojesi.AnasayfaFragment"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfa_to_kitapDetay"
+            app:destination="@id/kitapDetay_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/sifreGirme_nav"
+        android:name="com.example.mobiluygulamaprojesi.SifreGirmeFragment"
+        tools:layout="@layout/fragment_sifre_girme" >
+        <action
+            android:id="@+id/action_sifreGirme_to_giris"
+            app:destination="@id/giris_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriler_nav"
+        android:name="com.example.mobiluygulamaprojesi.FavorilerFragment"
+        tools:layout="@layout/fragment_favoriler" >
+        <action
+            android:id="@+id/action_favoriler_to_kitapDetay"
+            app:destination="@id/kitapDetay_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetim_nav"
+        android:name="com.example.mobiluygulamaprojesi.SepetimFragment"
+        tools:layout="@layout/fragment_sepetim" />
+    <fragment
+        android:id="@+id/hesabim_nav"
+        android:name="com.example.mobiluygulamaprojesi.HesabimFragment"
+        tools:layout="@layout/fragment_hesabim" >
+        <action
+            android:id="@+id/action_hesabim_to_profil"
+            app:destination="@id/profil_nav" />
+        <action
+            android:id="@+id/action_hesabim_to_profilDegistir"
+            app:destination="@id/profilDegistir_nav" />
+        <action
+            android:id="@+id/action_hesabim_to_sifreGirme"
+            app:destination="@id/sifreGirme_nav" />
+        <action
+            android:id="@+id/action_hesabim_to_giris"
+            app:destination="@id/giris_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/iletisim_nav"
+        android:name="com.example.mobiluygulamaprojesi.IletisimFragment"
+        tools:layout="@layout/fragment_iletisim" />
+    <fragment
+        android:id="@+id/profil_nav"
+        android:name="com.example.mobiluygulamaprojesi.ProfilFragment"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/profilDegistir_nav"
+        android:name="com.example.mobiluygulamaprojesi.ProfilDegistirFragment"
+        tools:layout="@layout/fragment_profil_degistir" />
+    <fragment
+        android:id="@+id/kitapDetay_nav"
+        android:name="com.example.mobiluygulamaprojesi.KitapDetayFragment"
+        tools:layout="@layout/fragment_kitap_detay" >
+        <argument android:name="kitapNesnesi"
+            app:argType="com.example.mobiluygulamaprojesi.Kitaplar" />
+    </fragment>
+</navigation>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/advin_activity_nav"
+    app:startDestination="@id/admin_kitaplar_fragment_nav">
+
+    <fragment
+        android:id="@+id/admin_kitaplar_fragment_nav"
+        android:name="com.example.mobiluygulamaprojesi.AdminKitaplarFragment"
+        android:label="fragment_admin_kitaplar"
+        tools:layout="@layout/fragment_admin_kitaplar" >
+        <action
+            android:id="@+id/actionAdminKitaplarFragmentToAdminKitapDetayFragment"
+            app:destination="@id/admin_kitap_detay_fragment_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/admin_kullanicilar_fragment_nav"
+        android:name="com.example.mobiluygulamaprojesi.AdminKullanicilarFragment"
+        android:label="fragment_admin_kullanicilar"
+        tools:layout="@layout/fragment_admin_kullanicilar" />
+    <fragment
+        android:id="@+id/admin_siparisler_fragment_nav"
+        android:name="com.example.mobiluygulamaprojesi.AdminSiparislerFragment"
+        android:label="fragment_admin_siparisler"
+        tools:layout="@layout/fragment_admin_siparisler" />
+    <fragment
+        android:id="@+id/adminProfilFragment"
+        android:name="com.example.mobiluygulamaprojesi.AdminProfilFragment"
+        android:label="fragment_admin_profil"
+        tools:layout="@layout/fragment_admin_profil" />
+    <fragment
+        android:id="@+id/admin_kitap_detay_fragment_nav"
+        android:name="com.example.mobiluygulamaprojesi.AdminKitapDetayFragment"
+        android:label="fragment_admin_kitap_detay"
+        tools:layout="@layout/fragment_admin_kitap_detay" >
+        <argument
+            android:name="secilenKitap"
+            app:argType="com.example.mobiluygulamaprojesi.Kitaplar"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

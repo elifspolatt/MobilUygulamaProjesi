@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutDetay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBE9E7"
+    android:backgroundTint="#FBE9E7"
+    tools:context=".KitapDetayFragment">
+
+    <ImageView
+        android:id="@+id/imageViewKitapDetay"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/textKitapAdi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewKitapDetay"
+        tools:text="ÜçDörtBeş Yayınları AYT Matematik Soru Bankası" />
+
+    <TextView
+        android:id="@+id/textKitapYayincisi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="#757575"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textKitapAdi"
+        app:layout_constraintStart_toStartOf="@+id/textKitapAdi"
+        app:layout_constraintTop_toBottomOf="@+id/textKitapAdi"
+        tools:text="ÜçDörtBeş Yayınları" />
+
+    <TextView
+        android:id="@+id/textKitapFiyati"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="#009688"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textKitapYayincisi"
+        tools:text="549.00 ₺" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/butonFavori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:src="@android:drawable/btn_star_big_off"
+        app:backgroundTint="#006F8C"
+        app:layout_constraintBottom_toTopOf="@+id/butonSepet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#D4AF37" />
+
+    <Button
+        android:id="@+id/butonSepet"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#006F8C"
+        android:text="SEPETE EKLE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

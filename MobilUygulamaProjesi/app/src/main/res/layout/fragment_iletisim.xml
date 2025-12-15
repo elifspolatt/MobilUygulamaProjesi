@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutIletisim"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBE9E7"
+    android:backgroundTint="#FBE9E7"
+    android:paddingBottom="60dp"
+    tools:context=".IletisimFragment" >
+
+    <ImageView
+        android:id="@+id/imageIletisimLogo"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/kahve_cafe_kurumsal_logo_tasarm_2__fotor_bg_remover_2025120516330"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHarita"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageIletisimLogo">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mapFragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageIletisimAdres"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:src="@android:drawable/ic_menu_myplaces"
+        app:tint="#006F8C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewHarita"/>
+
+    <TextView
+        android:id="@+id/textIletisimAdres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Kabaoğlu Mahallesi, Baki Komsuoğlu Bulvarı No:515\nİzmit / Kocaeli"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageIletisimAdres"
+        app:layout_constraintTop_toTopOf="@+id/imageIletisimAdres"/>
+
+    <ImageView
+        android:id="@+id/imageIletisimTelefon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@android:drawable/ic_menu_call"
+        app:tint="#006F8C"
+        app:layout_constraintStart_toStartOf="@+id/imageIletisimAdres"
+        app:layout_constraintTop_toBottomOf="@id/textIletisimAdres"/>
+
+    <TextView
+        android:id="@+id/textIletisimTelefon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="+90 262 303 1000"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageIletisimTelefon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageIletisimTelefon"
+        app:layout_constraintTop_toTopOf="@+id/imageIletisimTelefon"/>
+
+    <ImageView
+        android:id="@+id/imageIletisimMail"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:src="@android:drawable/ic_dialog_email"
+        app:tint="#006F8C"
+        app:layout_constraintStart_toStartOf="@+id/imageIletisimAdres"
+        app:layout_constraintTop_toBottomOf="@+id/textIletisimTelefon"/>
+
+    <TextView
+        android:id="@+id/textIletisimMail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="iletisim@noctua.com"
+        android:textColor="#333333"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageIletisimMail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageIletisimMail"
+        app:layout_constraintTop_toTopOf="@+id/imageIletisimMail"/>
+
+    <TextView
+        android:id="@+id/textIletisimSosyalMedya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Sosyal Medya Adreslerimiz"
+        android:textColor="#006F8C"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textIletisimMail"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textIletisimSosyalMedya">
+
+        <ImageView
+            android:id="@+id/imageIletisimX"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="24dp"
+            android:src="@android:drawable/ic_menu_send"
+            app:tint="#D4AF37"/>
+
+        <ImageView
+            android:id="@+id/imageIletisimInstagram"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:src="@android:drawable/ic_menu_camera"
+            app:tint="#D4AF37"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

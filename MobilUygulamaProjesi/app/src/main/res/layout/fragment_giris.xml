@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutGiris"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    android:backgroundTint="#FBE9E7"
+    android:visibility="visible"
+    tools:context=".GirisFragment">
+
+    <EditText
+        android:id="@+id/editTextGirisEposta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="E-posta"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#979292"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/editTextGirisSifre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGirisBilgi" />
+
+    <EditText
+        android:id="@+id/editTextGirisSifre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#979292"
+        app:layout_constraintBottom_toTopOf="@+id/butonGirisSifreSifirlama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGirisEposta" />
+
+    <Button
+        android:id="@+id/butonGirisGirisYap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#006F8C"
+        android:paddingVertical="12dp"
+        android:text="GİRİŞ YAP"
+        app:layout_constraintBottom_toTopOf="@+id/layoutKayitOlContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butonGirisSifreSifirlama" />
+
+    <Button
+        android:id="@+id/butonGirisSifreSifirlama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="ŞİFREMİ UNUTTUM?"
+        android:textColor="#006F8C"
+        app:layout_constraintBottom_toTopOf="@+id/butonGirisGirisYap"
+        app:layout_constraintEnd_toEndOf="@+id/editTextGirisSifre"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGirisSifre" />
+
+    <ImageView
+        android:id="@+id/logoGiris"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/kahve_cafe_kurumsal_logo_tasarm_2__fotor_bg_remover_2025120516330"
+        app:layout_constraintBottom_toTopOf="@+id/textGirisBilgi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textGirisBilgi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="GİRİŞ YAP"
+        android:textColor="#0F0E0E"
+        android:textColorLink="#181616"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextGirisEposta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoGiris" />
+
+    <LinearLayout
+        android:id="@+id/layoutKayitOlContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/butonGirisGirisYap"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textKayitBilgi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HESABIN YOK MU?"
+            android:textColor="#121212"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/butonGirisKayit"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="KAYIT OL"
+            android:textColor="#006F8C"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
